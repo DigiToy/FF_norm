@@ -65,12 +65,14 @@ public class Wallpaper extends Activity implements Runnable {
 		wallNumber = getIntent().getIntExtra("wallNumber", 1000);
 		resID = walls[wallNumber];
 
-		if (AppSettings.dispHeight == 600) {
-			wSize = "1200x1024";
-		} else if (AppSettings.dispHeight == 720) {
-			wSize = "1440x1280";
+		if (AppSettings.dispHeight == 240) {
+			wSize = "480x320";
+		} else if (AppSettings.dispHeight == 320) {
+			wSize = "640x480";
+		} else if (AppSettings.dispHeight == 480) {
+			wSize = "960x800";
 		} else {
-			wSize = "1920x1408";
+			wSize = "1080x960";
 		}
 
 		imagePath = wSize + "/w_" + (wallNumber < 9 ? "0" : "")
