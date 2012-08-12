@@ -18,9 +18,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:background="@null"
-        android:contentDescription="@string/button_sound_content"
-        android:src="@drawable/save_button" />
+        android:background="@drawable/save_button"
+        android:contentDescription="@string/button_sound_content" />
 
     <ImageButton
         android:id="@+id/buttonSetWall"
@@ -28,8 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:background="@null"
-        android:contentDescription="@string/button_sound_content"
-        android:src="@drawable/set_button" />
+        android:background="@drawable/set_button"
+        android:contentDescription="@string/button_sound_content" />
 
 </RelativeLayout>

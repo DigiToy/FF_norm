@@ -1,10 +1,8 @@
 package tk.digitoy.ff.activities;
 
 import tk.digitoy.ff.utils.AppSettings;
-
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -12,7 +10,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.ImageView.ScaleType;
 import android.widget.RelativeLayout;
 import android.widget.RelativeLayout.LayoutParams;
 
@@ -136,15 +133,11 @@ public class GamesMenu extends Activity {
 
 		// "Memory Game" button
 		buttonMemory = new ImageButton(this);
-		buttonMemory.setBackgroundColor(Color.TRANSPARENT);
-		buttonMemory.setImageResource(R.drawable.button_memory);
-		buttonMemory.setScaleType(ScaleType.FIT_XY);
+		buttonMemory.setBackgroundResource(R.drawable.button_memory);
 
 		// "Puzzle Game" button
 		buttonPuzzle = new ImageButton(this);
-		buttonPuzzle.setBackgroundColor(Color.TRANSPARENT);
-		buttonPuzzle.setImageResource(R.drawable.button_puzzle);
-		buttonPuzzle.setScaleType(ScaleType.FIT_XY);
+		buttonPuzzle.setBackgroundResource(R.drawable.button_puzzle);
 
 		// Adding views to layout
 		rl.addView(buttonMemory);
