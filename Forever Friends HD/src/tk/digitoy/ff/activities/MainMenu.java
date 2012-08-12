@@ -4,6 +4,7 @@ import tk.digitoy.ff.utils.AppSettings;
 import android.app.Activity;
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
@@ -20,12 +21,14 @@ public class MainMenu extends Activity {
 	private ImageButton buttonGame;
 	private ImageButton buttonWall;
 	private ImageButton buttonAbout;
+	private ImageButton buttonMoreGames;
 
 	// Layout Parameters
 	// Buttons selected
 	private LayoutParams paramGame;
 	private LayoutParams paramWall;
 	private LayoutParams paramAbout;
+	private LayoutParams paramMoreGames;
 
 	// Activity Layout
 	private RelativeLayout rl;
@@ -70,6 +73,7 @@ public class MainMenu extends Activity {
 		buttonGame.setLayoutParams(paramGame);
 		buttonWall.setLayoutParams(paramWall);
 		buttonAbout.setLayoutParams(paramAbout);
+		buttonMoreGames.setLayoutParams(paramMoreGames);
 	}
 
 	// Activating click listeners
@@ -110,6 +114,15 @@ public class MainMenu extends Activity {
 			}
 		});
 
+		// "More Games" button Click Listener
+		buttonMoreGames.setOnClickListener(new OnClickListener() {
+			public void onClick(View arg0) {
+				Intent intent = new Intent(Intent.ACTION_VIEW);
+				intent.setData(Uri.parse("market://search?q=pub:DigiToy"));
+				startActivity(intent);
+			}
+		});
+
 	}
 
 	// Initializing Layout Parameters
@@ -129,6 +142,11 @@ public class MainMenu extends Activity {
 				AppSettings.dispHeight * 76 / 480);
 		paramAbout.leftMargin = AppSettings.dispWidth * 86 / 800;
 		paramAbout.topMargin = AppSettings.dispHeight * 207 / 480;
+
+		paramMoreGames = new LayoutParams(AppSettings.dispWidth * 236 / 800,
+				AppSettings.dispHeight * 76 / 480);
+		paramMoreGames.leftMargin = AppSettings.dispWidth * 86 / 800;
+		paramMoreGames.topMargin = AppSettings.dispHeight * 283 / 480;
 	}
 
 	// Creating and adding static views
@@ -149,10 +167,15 @@ public class MainMenu extends Activity {
 		buttonAbout = new ImageButton(this);
 		buttonAbout.setBackgroundResource(R.drawable.button_about);
 
+		// "More Games" button
+		buttonMoreGames = new ImageButton(this);
+		buttonMoreGames.setBackgroundResource(R.drawable.button_about);
+
 		// Adding views to layout
 		rl.addView(buttonGame);
 		rl.addView(buttonWall);
 		rl.addView(buttonAbout);
+		rl.addView(buttonMoreGames);
 	}
 
 	// Creating and adding dynamic views
