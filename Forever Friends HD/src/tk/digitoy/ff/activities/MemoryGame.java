@@ -166,10 +166,10 @@ public class MemoryGame extends Activity implements OnClickListener {
 
 	@Override
 	protected void onPause() {
-		super.onPause();
 		if (AppSettings.isApplicationSentToBackground(this)) {
 			AppSettings.music.pause();
 		}
+		super.onPause();
 	}
 
 	public void onClick(View v) {

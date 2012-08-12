@@ -139,13 +139,13 @@ public class Wallpaper extends Activity implements Runnable {
 
 	@Override
 	protected void onPause() {
-		super.onPause();
 		if (AppSettings.isApplicationSentToBackground(this)) {
 			AppSettings.music.pause();
 		}
 		if (pDialog != null && pDialog.isShowing()) {
 			pDialog.dismiss();
 		}
+		super.onPause();
 	}
 
 	public void setWallpaper() {

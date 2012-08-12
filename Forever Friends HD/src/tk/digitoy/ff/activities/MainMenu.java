@@ -38,9 +38,9 @@ public class MainMenu extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main_menu);
-
-		initAll();
-
+		if (!AppSettings.isInit) {
+			initAll();
+		}
 		initLayoutParams();
 		drawStaticLayout();
 	}
@@ -198,17 +198,9 @@ public class MainMenu extends Activity {
 
 	@Override
 	protected void onPause() {
-		super.onPause();
 		if (AppSettings.isApplicationSentToBackground(this)) {
 			AppSettings.music.pause();
 		}
+		super.onPause();
 	}
-
-	@Override
-	protected void onDestroy() {
-		AppSettings.music.release();
-		AppSettings.isInit = false;
-		super.onDestroy();
-	}
-
 }
