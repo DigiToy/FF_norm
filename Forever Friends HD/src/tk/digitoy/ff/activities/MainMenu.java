@@ -143,10 +143,10 @@ public class MainMenu extends Activity {
 		paramAbout.leftMargin = AppSettings.dispWidth * 86 / 800;
 		paramAbout.topMargin = AppSettings.dispHeight * 207 / 480;
 
-		paramMoreGames = new LayoutParams(AppSettings.dispWidth * 236 / 800,
-				AppSettings.dispHeight * 76 / 480);
-		paramMoreGames.leftMargin = AppSettings.dispWidth * 86 / 800;
-		paramMoreGames.topMargin = AppSettings.dispHeight * 283 / 480;
+		paramMoreGames = new LayoutParams(AppSettings.dispWidth * 121 / 800,
+				AppSettings.dispHeight * 69 / 480);
+		paramMoreGames.leftMargin = AppSettings.dispWidth * 659 / 800;
+		paramMoreGames.topMargin = AppSettings.dispHeight * 391 / 480;
 	}
 
 	// Creating and adding static views
@@ -169,7 +169,7 @@ public class MainMenu extends Activity {
 
 		// "More Games" button
 		buttonMoreGames = new ImageButton(this);
-		buttonMoreGames.setBackgroundResource(R.drawable.button_about);
+		buttonMoreGames.setBackgroundResource(R.drawable.more_button);
 
 		// Adding views to layout
 		rl.addView(buttonGame);
@@ -203,4 +203,11 @@ public class MainMenu extends Activity {
 		}
 		super.onPause();
 	}
+
+	@Override
+	public void onBackPressed() {
+		AppSettings.music.release();
+		super.onBackPressed();
+	}
+
 }
