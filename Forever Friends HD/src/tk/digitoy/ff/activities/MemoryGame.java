@@ -243,7 +243,7 @@ public class MemoryGame extends Activity implements OnClickListener {
 		alertDialog = new Dialog(this);
 		alertDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		alertDialog = new Dialog(this,
-				android.R.style.Theme_Translucent_NoTitleBar);
+				android.R.style.Theme_Translucent_NoTitleBar_Fullscreen);
 		alertDialog.setContentView(R.layout.dialog);
 		alertDialog.setCancelable(true);
 
