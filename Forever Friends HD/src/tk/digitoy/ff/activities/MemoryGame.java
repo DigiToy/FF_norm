@@ -6,11 +6,6 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import tk.digitoy.ff.utils.AppSettings;
-
-import com.google.ads.AdRequest;
-import com.google.ads.AdSize;
-import com.google.ads.AdView;
-
 import android.app.Activity;
 import android.app.Dialog;
 import android.graphics.Bitmap;
@@ -19,14 +14,18 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.DisplayMetrics;
 import android.view.View;
-import android.view.Window;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.view.animation.AlphaAnimation;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 import android.widget.RelativeLayout.LayoutParams;
+import android.widget.TextView;
+
+import com.google.ads.AdRequest;
+import com.google.ads.AdSize;
+import com.google.ads.AdView;
 
 public class MemoryGame extends Activity implements OnClickListener {
 
@@ -248,7 +247,8 @@ public class MemoryGame extends Activity implements OnClickListener {
 		alertDialog.setContentView(R.layout.dialog);
 		alertDialog.setCancelable(true);
 
-		Button okButton = (Button) alertDialog.findViewById(R.id.OK_btn);
+		ImageButton okButton = (ImageButton) alertDialog
+				.findViewById(R.id.OK_btn);
 		okButton.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {

@@ -12,21 +12,23 @@
         android:contentDescription="@string/wallpaper_thumb"
         android:scaleType="centerCrop" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/buttonSaveWall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
+        android:background="@null"
         android:contentDescription="@string/button_sound_content"
         android:src="@drawable/save_button" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/buttonSetWall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
+        android:background="@null"
         android:contentDescription="@string/button_sound_content"
         android:src="@drawable/set_button" />
 

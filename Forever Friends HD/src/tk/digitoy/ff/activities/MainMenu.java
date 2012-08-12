@@ -4,11 +4,13 @@ import tk.digitoy.ff.utils.AppSettings;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.RelativeLayout;
@@ -18,9 +20,9 @@ public class MainMenu extends Activity {
 
 	// Button Images
 	private ImageView buttonSound;
-	private ImageView buttonGame;
-	private ImageView buttonWall;
-	private ImageView buttonAbout;
+	private ImageButton buttonGame;
+	private ImageButton buttonWall;
+	private ImageButton buttonAbout;
 
 	// Layout Parameters
 	// Buttons selected
@@ -139,17 +141,20 @@ public class MainMenu extends Activity {
 		rl = (RelativeLayout) findViewById(R.id.main_menu);
 
 		// "Game" button
-		buttonGame = new ImageView(this);
+		buttonGame = new ImageButton(this);
+		buttonGame.setBackgroundColor(Color.TRANSPARENT);
 		buttonGame.setImageResource(R.drawable.button_games);
 		buttonGame.setScaleType(ScaleType.FIT_XY);
 
 		// "Wallpapers" button
-		buttonWall = new ImageView(this);
+		buttonWall = new ImageButton(this);
+		buttonWall.setBackgroundColor(Color.TRANSPARENT);
 		buttonWall.setImageResource(R.drawable.button_wallpapers);
 		buttonWall.setScaleType(ScaleType.FIT_XY);
 
 		// "About Hello Kitty" button
-		buttonAbout = new ImageView(this);
+		buttonAbout = new ImageButton(this);
+		buttonAbout.setBackgroundColor(Color.TRANSPARENT);
 		buttonAbout.setImageResource(R.drawable.button_about);
 		buttonAbout.setScaleType(ScaleType.FIT_XY);
 

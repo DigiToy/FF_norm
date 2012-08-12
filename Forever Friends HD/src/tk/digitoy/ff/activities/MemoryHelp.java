@@ -3,11 +3,13 @@ package tk.digitoy.ff.activities;
 import tk.digitoy.ff.utils.AppSettings;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.RelativeLayout;
@@ -17,7 +19,7 @@ public class MemoryHelp extends Activity {
 
 	// Button Images
 	private ImageView buttonSound;
-	private ImageView buttonPlay;
+	private ImageButton buttonPlay;
 
 	// Layout Parameters
 	private LayoutParams paramPlay;
@@ -119,7 +121,8 @@ public class MemoryHelp extends Activity {
 		rl = (RelativeLayout) findViewById(R.id.memory_help_rl);
 
 		// "Play" button
-		buttonPlay = new ImageView(this);
+		buttonPlay = new ImageButton(this);
+		buttonPlay.setBackgroundColor(Color.TRANSPARENT);
 		buttonPlay.setImageResource(R.drawable.play_memory);
 		buttonPlay.setScaleType(ScaleType.FIT_CENTER);
 

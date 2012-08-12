@@ -22,6 +22,7 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,8 +31,8 @@ public class Wallpaper extends Activity implements Runnable {
 
 	private ProgressDialog pDialog;
 	// Button Images
-	private ImageView buttonSet;
-	private ImageView buttonSave;
+	private ImageButton buttonSet;
+	private ImageButton buttonSave;
 
 	// generate bitmap
 	private int resID;
@@ -122,8 +123,8 @@ public class Wallpaper extends Activity implements Runnable {
 	private void drawStaticLayout() {
 
 		// Handling from XML
-		buttonSet = (ImageView) findViewById(R.id.buttonSetWall);
-		buttonSave = (ImageView) findViewById(R.id.buttonSaveWall);
+		buttonSet = (ImageButton) findViewById(R.id.buttonSetWall);
+		buttonSave = (ImageButton) findViewById(R.id.buttonSaveWall);
 
 		ImageView img = (ImageView) findViewById(R.id.wallPaper);
 		img.setImageResource(resID);
