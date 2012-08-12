@@ -170,7 +170,7 @@ public class Wallpaper extends Activity implements Runnable {
 	public void run() {
 		if (saveOrSet == 1) {
 			String newFileName = Environment.getExternalStorageDirectory()
-					+ "/Forever_Friends/FF_wallpaper_" + (wallNumber + 1)
+					+ "/Forever Friends/FF_wallpaper_" + (wallNumber + 1)
 					+ ".jpg";
 
 			AssetManager assetManager = this.getAssets();
@@ -179,7 +179,7 @@ public class Wallpaper extends Activity implements Runnable {
 			OutputStream out = null;
 			try {
 				new File(Environment.getExternalStorageDirectory()
-						+ "/Forever_Friends/").mkdirs();
+						+ "/Forever Friends/").mkdirs();
 
 				in = assetManager.open(imagePath);
 
